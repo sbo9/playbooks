@@ -6,5 +6,5 @@
         image: sbonnet08/helloweb
         ports: 
           - 81:80
-      when: (ansible_distribution == 'Ubuntu' or ansible_os_family == 'Debian')
+      when: (ansible_distribution == 'CentOs' or ansible_os_family == 'RedHat')
 
