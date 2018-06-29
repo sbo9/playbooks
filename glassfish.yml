@@ -1,0 +1,11 @@
+- hosts: 192.168.1.41
+  tasks:  
+    - name: installation glassfish
+      docker_container:
+        name: glassfish
+        image: yodamien0/glassfish
+        ports:
+          - 8080:8080
+          - 4848:4848
+          - 8181:8181
+      when: (ansible_distribution == '{{distribution}}' or ansible_os_family == '{{linux_family}}')
