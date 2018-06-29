@@ -11,6 +11,12 @@ Pré-requis
 2/ Les plugins Maven et Ansible doivent être installés sur Jenkins.
 3/ Un script post-build permet de renommer le .war.
 
+Script post-build
+-----------------
+#!/bin/bash
+cd /var/jenkins_home/workspace/Mavenjeered/target
+mv JEERed-1.0-SNAPSHOT.war jeered.war
+
 Infos sur les auteurs
 ---------------------
 Team de gauche (Damien, Sylvain, Olivier, Eric)
